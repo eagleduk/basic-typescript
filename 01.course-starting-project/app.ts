@@ -45,3 +45,7 @@ function unionType(input: string | number) {
 
 let reteral: "auther" | "guest";
 reteral = "auther";
+
+type UserCustom = string | number;
+let userVariable: UserCustom;
+let userVariable2: UserCustom;
