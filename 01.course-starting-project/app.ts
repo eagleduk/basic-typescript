@@ -25,3 +25,15 @@ person.description = "Number And String abled property.";
 
 if (person.role === ROLE.GUEST) {
 }
+
+let union: string | number;
+union = "type of String";
+union = 30;
+
+function unionType(input: string | number) {
+  if (typeof input === "string") {
+    return input.toLowerCase();
+  } else {
+    return input.toFixed(2);
+  }
+}
