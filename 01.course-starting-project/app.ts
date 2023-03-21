@@ -30,6 +30,11 @@ let union: string | number;
 union = "type of String";
 union = 30;
 
+/**
+ *
+ * @param input
+ * @returns
+ */
 function unionType(input: string | number) {
   if (typeof input === "string") {
     return input.toLowerCase();
@@ -37,3 +42,6 @@ function unionType(input: string | number) {
     return input.toFixed(2);
   }
 }
+
+let reteral: "auther" | "guest";
+reteral = "auther";
