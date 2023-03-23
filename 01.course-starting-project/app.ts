@@ -49,3 +49,58 @@ reteral = "auther";
 type UserCustom = string | number;
 let userVariable: UserCustom;
 let userVariable2: UserCustom;
+
+/*
+ *  void 타입
+ */
+
+function printResult(a1: number, a2: number) {
+  console.log("result: " + (a1 + a2));
+}
+
+/*
+ *  함수 타입
+ */
+
+function add(num1: number, num2: number) {
+  return num1 + num2;
+}
+
+let function1: Function;
+function1 = add;
+function1 = printResult;
+
+function1(2, 3);
+function1();
+
+let function2: (num1: number, num2: number) => number;
+function2 = add;
+// function2 = printResult;
+
+/*
+ *  unknown 타입
+ */
+
+let anyType: any;
+let unknownType: unknown;
+
+let anyValue: string;
+let unknownValue: string;
+
+anyValue = anyType;
+// unknownValue = unknownType;
+if (typeof unknownType === "string") unknownValue = unknownType;
+
+/*
+ *  never 타입
+ */
+
+function throwsFunction() {
+  throw {
+    message: "ERROR",
+  };
+}
+
+function loopf(): never {
+  while (true) {}
+}
