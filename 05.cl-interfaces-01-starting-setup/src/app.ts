@@ -1,9 +1,11 @@
-class Department {
-  constructor(private readonly id: string, public name: string) {}
-  describe(this: Department) {
-    console.log("Department(" + this.id + "): " + this.name);
-  }
+const inputElement = document.getElementById("name");
+
+if (inputElement) {
+  const name = (inputElement as HTMLInputElement).value;
 }
 
-const dev = new Department("d1", "R&D center");
-dev.describe();
+const numberElement = <HTMLInputElement>document.getElementById("age");
+
+if (numberElement) {
+  const age = numberElement.value;
+}
